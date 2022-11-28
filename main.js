@@ -94,6 +94,7 @@ autoUpdater.on('update-downloaded', (info) => {
   sendStatusToWindow('Update downloaded');
 });
 app.on('ready', function() {
+  autoUpdater.checkForUpdates();
   // Create the Menu
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);
